@@ -3,12 +3,41 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Scott Hansford's Word Guess Game</title>
+    <title>Scott Hansford's Hangman</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="game.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+
 </head>
-<body>
+
+<body class="bg">
+
     
+    <div class="welcome">
+        <h1>Let's get this party started!</h1>
+        
+    </div>
+
+    <div class="instructions">
+        <h3 class="theme">The game is:<h2> 80's movie titles.</h2></h3>
+    </div>
+    
+    <div class="start_button">
+        <button class="button" id="startButton">
+            <span>Start </span>
+        </button>
+        <p id="message"></p>
+    </div>
+
+
+    <!--Display blank line spaces for chosen word-->
+    <div class="letters">
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+    
+
+    <script src="assets/javascript/game.js"></script>
 </body>
 </html>
