@@ -1,5 +1,7 @@
 //theme: 80's movies
 //array of movies
+
+
 var movies = [
     "Ghostbusters",
     "Superman",
@@ -16,80 +18,28 @@ var movies = [
 ];
 
 
+    //game chooses title from array randomly
+    //prevent repeats
 
-//game chooses title from array randomly
-//prevent repeats
-
-var random = movies[Math.floor(Math.random() * movies.length)];
-console.log(random);
-
-
-//fill empty array with spaces equal to letters in chosen word
-var guessList = [];
-for(var i = 0; i < random.length; i++) {
-    guessList[i] = "_";
-}
-console.log(guessList);
-var blankSpaces = random.length;
-
-console.log(blankSpaces);
-//display dashes on page
-
-//document.getElementById("message").innerHTML = guessList;
-/* //while word has no been guessed {
-    show the player current score 
-    Get guess from player
-} */
-var userGuess = "";
-document.onkeyup = function(event) {
-    //determines which key the user pressed
-    userGuess.push(event.key);
-}
+    var random = movies[Math.floor(Math.random() * movies.length)];
+    console.log(random);
 
 
-
-
-
-
-
-
-/* 
-while (blankSpaces > 0) {
-    guessList.join(" ");
-
-    /* if ( userGuess === null) {
-        //exit the game
-        break;
-    } */ /* else if ( userGuess.length !== 1) {
-        alert("Only enter a single letter.");
-    } else { 
-        //update blank spaces with guess
-        for ( var j = 0; j < random.length; j++){
-            if(random[j] === userGuess) {
-                guessList[j] = userGuess;
-                blankSpaces--;
-            }
-        }
+    //fill empty array with spaces equal to letters in chosen word
+    var guessList = [];
+    for(var i = 0; i < random.length; i++) {
+        guessList[i] = "_";
     }
- 
-    */
+    console.log(guessList);
 
+    
+    //display dashes on page
+    document.getElementById("spaces").innerHTML = guessList.join("");
+    document.getElementById("letters").innerHTML = random;
 
-//while (blankSpaces > 0) {
-    //show score
-    //get guesses
-    //update score and blankSpaces each correct guess
-//}
+    var blankSpaces = random.length;
 
-//if guess is > single letter
-// promp for single letter guess
-
-//if userGuess is in the word
-// update score
-
-
-//you lose!
-//you win!
+    console.log(blankSpaces);
 
 
 
