@@ -5,7 +5,7 @@
 
 body,html {
     height: 100%;
-    margin: 0;
+    /*margin: 0;*/
 }
 
 /* --background--*/
@@ -85,7 +85,7 @@ h3,h2 {
   font-family: 'Orbitron', sans-serif;
   font-size: 28px;
   padding: 10px;
-  width: 7.85vw;
+  width: 100px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
@@ -122,19 +122,31 @@ h3,h2 {
     justify-content: center;
 }
 
+.answerLine {
+  padding: 0;
+}
 
-#spaces, #letters {
+#spaces {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 5.85vw;/*vw = viewport*/
-  height: 5.85vh;
-  /* width: 100px;
-  height: 100px; */
-  margin-right: auto;
-  margin-left: auto;
+  line-height: 0;
+  margin: 0;
+  font-size: 4.5vw;
+  font-family: 'Orbitron', sans-serif;
+  color: lawngreen;  
+  text-shadow: 0 0 25px rgb(79, 8, 88), 0 0 21px rgb(255, 0, 191);
 }
 
 #letters {
-  padding-bottom: 0;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  margin: 0;
+  font-size: 4.5vw;
+  font-family: 'Orbitron', sans-serif;
+  color: lawngreen;
+  text-shadow: 0 0 25px rgb(79, 8, 88), 0 0 21px rgb(255, 0, 191);
 }
