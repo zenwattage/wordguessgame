@@ -21,10 +21,10 @@ var movies = [
     //game chooses title from array randomly
     //prevent repeats
 
-    var random = movies[Math.floor(Math.random() * movies.length)];
+    var movie = movies[Math.floor(Math.random() * movies.length)];
     
 
-    var chosenWord = random;
+    var chosenWord = movie;
     //console.log(typeof(chosenWord));
 
     //fill empty array with spaces equal to letters in chosen word
@@ -42,7 +42,7 @@ var movies = [
 
     //console.log(guessList);
     
-    //DISPLAY CURRENT SCORE
+    //DISPLAY CURRENT COS
     
     //display dashes on page
     document.getElementById("spaces").innerHTML = guessList.join("");
@@ -53,34 +53,53 @@ var movies = [
     //amount of turns is the amount of letters in the chosen word
     //lose turns on incorrect guesses
     
-    var turns= chosenWord.length;
+   var turns= chosenWord.length; 
     
     console.log("Turns Remaining: " + turns);
 
     //console.log(typeof(random));
-
-    //while turns > 0 {
-    
-    //get key pressed by user
+        
+    //get key pressed by user & convert it to a
     var keyPressed = "";
     addEventListener("keyup", function(event) {
-        keyPressed = String(event);
-        console.log("keyPressed type is: " + typeof(keyPressed));
-        //convert keyPressed from object to char
+        keyPressed = event.key; 
+        console.log(typeof(keyPressed));
 
-
-
-        for(var lettercheck = 0; lettercheck < letterList.length; lettercheck++) {
-            console.log(keyPressed);
-            if(keyPressed == letterList[lettercheck]){
-                console.log(keyPressed);
-                console.log(letterList[lettercheck]);
+        for(var j = 0; j < chosenWord.length; j++) {
+            if(chosenWord[j] != keyPressed){
+                turns--;
             }
+            //if the index of the chosen word matches key
+            if(chosenWord[j] === keyPressed){
+                //update dashed line with character pressed
+                rightAnSound.play();
+                guessList[j] = String(keyPressed);
+                //console.log("In the Word: "+chosenWord[j]);
+            }/* else {
+                //play wrong answer sound
+                wrongAnSound.play();
+                turns--
+                
+            } */
         }
 
+        //write score to screen
+        document.getElementById("score").innerHTML = "Turns Remaining: " + turns;
+        document.getElementById("spaces").innerHTML = guessList.join(chosenWord[j]);
 
-        
-    })
+
+
+        })
+
+
+
+        //sounds
+       var wrongAnSound = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/bad.mp3');
+       var rightAnSound = new Audio("https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/goodbell.mp3");
+       var winSound = new Audio("https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/win.mp3");
+       var loseSound = new Audio("https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/lose.mp3");
+            
+      
         
     //compare key pressed to chosen word (random)
 
@@ -94,10 +113,10 @@ var movies = [
 
 
 
-
+/* 
 
 //sounds
     this.goodSound = new Audio("https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/goodbell.mp3"),
     this.badSound = new Audio("https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/bad.mp3"),
     this.winSound = new Audio("https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/win.mp3"),
-    this.loseSound = new Audio("https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/lose.mp3")
+    this.loseSound = new Audio("https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/lose.mp3") */
