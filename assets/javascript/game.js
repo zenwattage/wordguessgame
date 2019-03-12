@@ -53,7 +53,7 @@ var movies = [
     //amount of turns is the amount of letters in the chosen word
     //lose turns on incorrect guesses
     
-   var turns= chosenWord.length; 
+   var turns= Number(chosenWord.length); 
     
     console.log("Turns Remaining: " + turns);
 
@@ -66,16 +66,20 @@ var movies = [
         console.log(typeof(keyPressed));
 
         for(var j = 0; j < chosenWord.length; j++) {
-            if(chosenWord[j] != keyPressed){
-                turns--;
-            }
+            
             //if the index of the chosen word matches key
             if(chosenWord[j] === keyPressed){
                 //update dashed line with character pressed
                 rightAnSound.play();
                 guessList[j] = String(keyPressed);
                 //console.log("In the Word: "+chosenWord[j]);
-            }/* else {
+            }
+            
+            if(chosenWord[j] != keyPressed){
+                turns--;
+            }
+            
+            /* else {
                 //play wrong answer sound
                 wrongAnSound.play();
                 turns--
@@ -86,6 +90,7 @@ var movies = [
         //write score to screen
         document.getElementById("score").innerHTML = "Turns Remaining: " + turns;
         document.getElementById("spaces").innerHTML = guessList.join(chosenWord[j]);
+        //document.getElementById("imageTest").innerHTML = 
 
 
 

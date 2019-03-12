@@ -8,6 +8,10 @@ body,html {
     /*margin: 0;*/
 }
 
+.container {
+  border-style: 2px solid black;
+}
+
 /* --background--*/
 .bg {
     /* The image used */
@@ -28,7 +32,7 @@ body,html {
     align-items: center;
     justify-content: center;
     color: white;
-    size: 600px;
+    
     padding-left: 20px;
 }
 
@@ -55,7 +59,7 @@ h1 {
     justify-content: center;
 }
 
-h2,h3 {
+h2 {
     font-size: 4.5vw;
     font-family: 'Orbitron', sans-serif;
     color: lawngreen;
@@ -64,7 +68,7 @@ h2,h3 {
     text-shadow: 0 0 25px rgb(79, 8, 88), 0 0 21px rgb(255, 0, 191);
 }
 
-h3,h2 {
+h3 {
     font-size: 50px;
     font-family: 'Orbitron', sans-serif;
     color: lawngreen;
@@ -123,6 +127,7 @@ h3,h2 {
 }
 
 .answerLine {
+  size: 5.00vh;
   padding: 0;
 }
 
@@ -132,7 +137,7 @@ h3,h2 {
   justify-content: center;
   line-height: 0;
   margin: 0;
-  font-size: 4.5vw;
+  font-size: 50px;
   font-family: 'Orbitron', sans-serif;
   color: lawngreen;  
   text-shadow: 0 0 25px rgb(79, 8, 88), 0 0 21px rgb(255, 0, 191);
@@ -149,4 +154,11 @@ h3,h2 {
   font-family: 'Orbitron', sans-serif;
   color: lawngreen;
   text-shadow: 0 0 25px rgb(79, 8, 88), 0 0 21px rgb(255, 0, 191);
+}
+
+#score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
 }
