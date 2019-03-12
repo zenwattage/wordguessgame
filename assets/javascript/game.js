@@ -53,7 +53,7 @@ var movies = [
     //amount of turns is the amount of letters in the chosen word
     //lose turns on incorrect guesses
     
-   var turns= Number(chosenWord.length); 
+   var turns= parseInt(chosenWord.length); 
     
     console.log("Turns Remaining: " + turns);
 
@@ -75,9 +75,10 @@ var movies = [
                 //console.log("In the Word: "+chosenWord[j]);
             }
             
-            if(chosenWord[j] != keyPressed){
+            else{(chosenWord[j] != keyPressed){
                 turns--;
             }
+        }
             
             /* else {
                 //play wrong answer sound
