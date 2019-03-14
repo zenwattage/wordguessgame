@@ -18,7 +18,8 @@ var turns;
 
 //key press event listener
 var keyPress;
-document.addEventListener( "keypress" , function(event) {
+
+document.addEventListener("onkeyup" , function(event) {
         keyPress = event.key; })
 
 //function to get a random title from the array of movies
@@ -47,7 +48,7 @@ for(var i = 0; i < turns; i++) {
 
 
     //match these codes to codes of .key event
-    console.log(charArray[i].charCodeAt());
+    //console.log(charArray[i].charCodeAt());
 }
 
 
@@ -60,7 +61,7 @@ var repeatCheck = function(a) {
             console.log(j);
             if (a[i] === a[j]) {
                 console.log("Repeats are : " + a[i]);
-                keyPressArray = a[j];
+                keyPressArray.push(a[j]);
                 //console.log("Matching are : " + keyPressArray);
                 
             }
@@ -82,6 +83,7 @@ repeatCheck(charArray);
 
 
 
+
 function displayDashes(array){
     document.getElementById("outputLine").innerHTML = array.join(" ");
 }
@@ -93,7 +95,7 @@ console.log(" Index 1 of title is: " + movieTitle[1]);
 console.log("Turns left: " + turns);
 
 //function calls
-displayDashes(dashArray);
+//displayDashes(dashArray);
 
 
 
