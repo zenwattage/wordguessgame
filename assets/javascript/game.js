@@ -2,6 +2,14 @@
 //array of movies
 
 
+
+// display guessed letters, once
+
+
+
+
+
+
 var movies = [
     "Ghostbusters",
     "Superman",
@@ -39,30 +47,9 @@ var movies = [
     }
 
     var guessList = [];
-    //fill array with non mathcing pressed key
-   /*  var guessList = [];
-    addEventListener("keydown", function(event){
-        for(var b = 0; b < chosenWord.length; b++) {
-            if(chosenWord[b] !== keyPressed) {
-                guessList[b] = keyPressed;
-            }
-        }
-
-
-    }) */
-    
-        
-
       
     //display dashes on page
     document.getElementById("spaces").innerHTML = spaceList.join("");
-
-    //display chosen word on page
-    //document.getElementById("letters").innerHTML = letterList.join("");
-
-    //amount of turns is the amount of letters in the chosen word
-    //lose turns on incorrect guesses
-    
    var turns= parseInt(chosenWord.length);
 
     
@@ -90,21 +77,12 @@ var movies = [
             }
            
         }
-                /* else {
-                //play wrong answer sound
-                wrongAnSound.play();
-                turns--
-                
-            } */
-        
 
         //write score to screen
         document.getElementById("wrongGuesses").innerHTML = "Guessed Letters: " + guessList;
         document.getElementById("score").innerHTML = "Turns Remaining: " + turns;
         document.getElementById("spaces").innerHTML = spaceList.join("",chosenWord[j]);
         //document.getElementById("imageTest").innerHTML = 
-
-
 
         })
 

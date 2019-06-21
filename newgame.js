@@ -72,14 +72,6 @@ var repeatCheck = function(a) {
 repeatCheck(charArray);
 
 
-/* charArray.forEach(index => {
-    console.log("character code is " + movieTitle.charCodeAt());
-    
-    
-}); */
-//console.log(dashArray);
-
-
 
 
 function displayDashes(array){
