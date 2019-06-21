@@ -58,40 +58,6 @@ padding-bottom:50px;
 position:relative;
 z-index:2;
 }
-
-@media screen and (max-width: 768px) {
-.jumbotron {
-  padding-top:20px;
-  padding-bottom:20px;
-  
-}
-
-#gamename {
-  font-size: 5em;
-}
-
-}
-
-@media screen and (max-width: 667px) {
-
-  #gamename {
-    font-size: 3em;
-  }
-}
-
-
-h1 {
-   
-    font-size: 5.85vw;/*vw = viewport widths*/
-    color: lawngreen;
-    align-self: center;
-    padding-left: auto;
-    text-shadow: 0 0 25px white, 0 0 21px rgb(255, 0, 191);
-    width: auto;
-}
-
-
-
 /*---instructions section ---*/
 
 .instructions {
@@ -106,16 +72,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-h2 {
-    font-size: 4.5vw;
-    font-family: 'Bangers', cursive;
-    color: lawngreen;
-    align-self: center;
-    padding-left: auto;
-    text-shadow: 0 0 25px rgb(79, 8, 88), 0 0 21px rgb(255, 0, 191);
-}
-
-h3 {
+h1, h2, h3 {
     font-size: 50px;
     font-family: 'Bangers', cursive;
     color: lawngreen;
@@ -200,7 +157,7 @@ h3 {
   justify-content: center;
   
   margin: 0;
-  font-size: 4.5vw;
+  font-size: 25em;
   font-family: 'Orbitron', sans-serif;
   color: lawngreen;
   text-shadow: 0 0 25px rgb(79, 8, 88), 0 0 21px rgb(255, 0, 191);
@@ -224,3 +181,26 @@ h3 {
   font-size: 30px;
 
 }
+
+@media screen and (max-width: 768px) {
+  .jumbotron {
+    padding-top:20px;
+    padding-bottom:20px;
+    
+  }
+  
+  #gamename {
+    font-size: 5em;
+  }
+  
+  }
+  
+  @media screen and (max-width: 667px) {
+  
+    #gamename {
+      font-size: 3em;
+    }
+  }
+
+
+  
