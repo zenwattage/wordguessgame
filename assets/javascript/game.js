@@ -72,16 +72,19 @@ var movies = [
                 spaceList[j] = String(keyPressed);
                 //console.log("In the Word: "+chosenWord[j]);
             } else {
-                guessList[j] = keyPressed;
-                console.log(guessList);
+                guessList.push(keyPressed);
             }
            
         }
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 17f78025a2e605bafb96178786d9c9e6a8b3c85b
 
         //write score to screen
         document.getElementById("wrongGuesses").innerHTML = "Guessed Letters: " + guessList;
         document.getElementById("score").innerHTML = "Turns Remaining: " + turns;
-        document.getElementById("spaces").innerHTML = spaceList.join("",chosenWord[j]);
+        document.getElementById("spaces").innerHTML = spaceList.join("");
         //document.getElementById("imageTest").innerHTML = 
 
         })
