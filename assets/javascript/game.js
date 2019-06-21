@@ -76,10 +76,7 @@ var movies = [
             }
            
         }
-<<<<<<< HEAD
-=======
         
->>>>>>> 17f78025a2e605bafb96178786d9c9e6a8b3c85b
 
         //write score to screen
         document.getElementById("wrongGuesses").innerHTML = "Guessed Letters: " + guessList;
