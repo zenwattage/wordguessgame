@@ -9,46 +9,50 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Orbitron&display=swap" rel="stylesheet"> 
 
 </head>
 
 <body class="bg">
 
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-4" id="banner">Let's get this party started!</h1>
+    <div class="jumbotron jumbotron-billboard">
+        <div class="img"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 id="gamename">Rad Guess</h2>
+                </div>
             </div>
         </div>
-    
-
-        <div class="instructions">
-            <h3 class="theme">The game is:<h2> 80's movie titles.</h2>
-            </h3>
-        </div>
-        <div class="scoreboard">
-            <h3 id="score"></h3>
-        </div>
-
-        <div class="reset_button">
-            <button class="button" id="resetButton" onclick="window.location.reload()">
-                <span>Reset</span>
-            </button>
-
-        </div>
+    </div>
 
 
-        <!--Display blank line spaces for chosen word-->
-        <div class="answerLine">
-            <p id="letters">
+    <div class="instructions">
+        <h3 class="theme">The game is 80's movie titles.</h3>
+    </div>
+    <div class="scoreboard">
+        <h3 id="score"></h3>
+    </div>
+
+    <div class="reset_button">
+        <button class="button" id="resetButton" onclick="window.location.reload()">
+            <span>Reset</span>
+        </button>
+
+    </div>
+
+
+    <!--Display blank line spaces for chosen word-->
+    <div class="answerLine">
+        <p id="letters">
+            </h1>
+            <p id="spaces">
                 </h1>
-                <p id="spaces">
-                    </h1>
-        </div>
+    </div>
 
-        <div class="wrongs">
-            <p id="wrongGuesses"></p>
-        </div>
+    <div class="wrongs">
+        <p id="wrongGuesses"></p>
+    </div>
 
 
 
