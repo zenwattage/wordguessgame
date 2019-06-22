@@ -1,15 +1,7 @@
+//REFACTOR
+
 //theme: 80's movies
 //array of movies
-
-
-
-// display guessed letters, once
-
-
-
-
-
-
 var movies = [
     "Ghostbusters",
     "Superman",
@@ -50,18 +42,12 @@ var movies = [
       
     //display dashes on page
     document.getElementById("spaces").innerHTML = spaceList.join("");
-   var turns= parseInt(chosenWord.length);
 
-    
-    console.log("Turns Remaining: " + turns);
-
-    //console.log(typeof(random));
-        
-    //get key pressed by user & convert it to a
     var keyPressed = "";
+
     addEventListener("keyup", function(event) {
         keyPressed = event.key;
-        console.log(keyPressed);
+        //console.log(keyPressed);
 
         for(var j = 0; j < chosenWord.length; j++) {
             //if the index of the chosen word matches key
@@ -76,15 +62,16 @@ var movies = [
             }
            
         }
-        
 
+        
         //write score to screen
         document.getElementById("wrongGuesses").innerHTML = "Guessed Letters: " + guessList;
         document.getElementById("score").innerHTML = "Turns Remaining: " + turns;
         document.getElementById("spaces").innerHTML = spaceList.join("");
-        //document.getElementById("imageTest").innerHTML = 
+        
 
         })
+
 
 
 
