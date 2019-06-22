@@ -1,6 +1,12 @@
 //REFACTOR
-
 //theme: 80's movies
+
+var wrongGuesses = 10; 
+var spaceList = [];
+var letterList = [];
+var guessList = [];
+
+
 //array of movies
 var movies = [
     "Ghostbusters",
@@ -30,22 +36,21 @@ var movies = [
     //NOT PREVENTING REPEATS    
 
     var chosenWord = movie.toLowerCase();
-    //console.log(typeof(chosenWord));
 
     //fill empty array with spaces equal to letters in chosen word
-    var spaceList = [];
+    
     for(var i = 0; i < chosenWord.length; i++) {
         spaceList[i] = "_";
     }
 
     //fill empty array with chosenWord seperated into characters
-    var letterList = [];
+    
     for(var g = 0; g < chosenWord.length; g++) {
         letterList[g] = chosenWord[g];
         console.log(letterList);
     }
 
-    var guessList = [];
+    
       
     //display dashes on page
     document.getElementById("spaces").innerHTML = spaceList.join("");
