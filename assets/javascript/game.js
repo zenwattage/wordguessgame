@@ -21,9 +21,9 @@ var movies = [
     //GET STATE OF GAME FUNCTION
     //CHECK WINSTATE FUNCTION
     //RESET GAME FUNCTION
-    
+
     //check if keys are between a(65)-z(90)
-    //if(event.keyCode >= 65 && event.keyCode <= 90)
+    //if(event.keyPressed >= 65 && event.keyPressed <= 90)
 
     //game chooses title from array randomly
     var movie = movies[Math.floor(Math.random() * movies.length)];
