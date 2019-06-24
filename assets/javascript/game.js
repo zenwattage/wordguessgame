@@ -33,15 +33,15 @@ var movies = [
 //GAME VIEW UPDATE FUNCTION
 function displayToUser() {
 
-}
+};
 
 //GET STATE OF GAME FUNCTION
 function getWin() {
 
-}
+};
 
 //GET GUESS FUNCTION
-function checkGuess(letter) {
+function makeGuess(letter) {
     if (guessesLeft > 0) {
         if (!gameRunning) {
             gameRunning = true;
@@ -55,7 +55,28 @@ function checkGuess(letter) {
 
     displayToUser();
     getWin();
-}
+};
+
+function checkGuess(letter){
+    var pos = [];
+
+    for(var i = 0 ; i < movies[wordIndex].length; i++) {
+        if(movies[wordIndex][i] === letter){
+        pos.push(i);
+        }
+    }
+
+    if(pos.length <= 0) {
+        guessesLeft--;
+        //updateimage
+    } else {
+        //replace _ on page with matched letter
+        for(var i = 0; i < pos.length; i++){
+            currentWord[pos[i]] = letter;
+        }
+    }
+
+};
 
 
 //RESET GAME FUNCTION
@@ -73,15 +94,14 @@ function resetGame() {
     }
     //reset win/lose image
     document.getElementById("winLoseImage").src = "";
-}
+};
 
 
 
 //UPDATE IMAGE UPON WIN OR LOSE
 function imageUpdate() {
     document.getElementById("winLoseImage").src = "assets/images/" + WINORLOSESTATEIMAGE + ".jpg";
-
-}
+};
 
 
 var keyPressed = "";
@@ -112,7 +132,7 @@ addEventListener("keyup", function (event) {
     }
 
 
-})
+});
 
 
 
