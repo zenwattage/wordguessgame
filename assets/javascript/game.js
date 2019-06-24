@@ -41,30 +41,41 @@ function getWin() {
 }
 
 //GET GUESS FUNCTION
-function checkGuess() {
+function checkGuess(letter) {
+    if (guessesLeft > 0) {
+        if (!gameRunning) {
+            gameRunning = true;
+        }
+    }
 
-    //check if keys are between a(65)-z(90)
-    //if(event.keyPressed >= 65 && event.keyPressed <= 90)
+    //check for repeats
+    if (guessedList.indexOf(letter) === -1) {
+        guessedList.push(letter);
+    }
 
+    displayToUser();
+    getWin();
 }
+
+
 //RESET GAME FUNCTION
 function resetGame() {
     guessesLeft = startTries;
     gameRunning = false;
     //clear arrays
     guessList = [];
-    currentWord = [];    
+    currentWord = [];
     //choose new random word from array
     wordIndex = movies[Math.floor(Math.random() * movies.length)];
     //put new word into spaces
-    for(var i = 0; i < movies[wordIndex].length; i++){
+    for (var i = 0; i < movies[wordIndex].length; i++) {
         currentWord.push("_");
     }
     //reset win/lose image
     document.getElementById("winLoseImage").src = "";
-    
-
 }
+
+
 
 //UPDATE IMAGE UPON WIN OR LOSE
 function imageUpdate() {
@@ -72,28 +83,6 @@ function imageUpdate() {
 
 }
 
-
-//NOT PREVENTING REPEATS    
-
-var chosenWord = movie.toLowerCase();
-console.log(chosenWord);
-//fill empty array with spaces equal to letters in chosen word
-
-for (var i = 0; i < chosenWord.length; i++) {
-    spaceList[i] = "_";
-}
-
-//fill empty array with chosenWord seperated into characters
-
-for (var g = 0; g < chosenWord.length; g++) {
-    letterList[g] = chosenWord[g];
-
-}
-console.log(letterList);
-
-
-//display dashes on page
-document.getElementById("spaces").innerHTML = spaceList.join("");
 
 var keyPressed = "";
 
@@ -110,23 +99,30 @@ addEventListener("keyup", function (event) {
             spaceList[j] = String(keyPressed);
             //console.log("In the Word: "+chosenWord[j]);
         } else {
+
+
+            //check if keys are between a(65)-z(90)
+            //if(event.keyPressed >= 65 && event.keyPressed <= 90)
+
+
             guessList.push(keyPressed);
             wrongTries--;
         }
 
     }
 
-    //write score to screen
-    document.getElementById("currentScore").innerHTML = "wins: " + wins;
-    document.getElementById("wrongTries").innerHTML = "Guessed Letters: " + guessList;
-    document.getElementById("score").innerHTML = "Turns Remaining: " + wrongTries;
-    document.getElementById("spaces").innerHTML = spaceList.join("");
-
 
 })
 
 
 
+
+
+//write score to screen
+document.getElementById("currentScore").innerHTML = "wins: " + wins;
+document.getElementById("wrongTries").innerHTML = "Guessed Letters: " + guessList;
+document.getElementById("score").innerHTML = "Turns Remaining: " + wrongTries;
+document.getElementById("spaces").innerHTML = spaceList.join("");
 
 
 //sounds
