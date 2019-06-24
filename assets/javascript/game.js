@@ -2,11 +2,16 @@
 //theme: 80's movies
 
 var wrongTries = 10;
+var guessesLeft = 0;
+
 var spaceList = [];
 var letterList = [];
 var guessList = [];
+
 var wins = 0;
 
+var gameRunning = false;
+var gameOver = false;
 
 //array of movies
 var movies = [
@@ -48,6 +53,7 @@ function restGame() {
 
 //UPDATE IMAGE UPON WIN OR LOSE
 function imageUpdate() {
+    document.getElementById("winLoseImage").src= "assets/images/" + 
 
 }
 
