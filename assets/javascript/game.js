@@ -3,10 +3,11 @@
 
 var startTries = 10;             //beginning # of tries player has
 var guessesLeft = 0;         //tries remaining
-
+var wordIndex;              //index of chosen word
 var spaceList = [];          //dashes matching letters in chosen word
 
-var guessList = [];          //list of letters guessed
+var guessedList = [];          //list of letters guessed
+var currentWord = [];       //current word 
 
 var wins = 0;               //amount of users wins
 
@@ -48,19 +49,30 @@ function checkGuess() {
 }
 //RESET GAME FUNCTION
 function restGame() {
-    guessesLeft = 
+    guessesLeft = startTries;
+    gameRunning = false;
+    //clear arrays
+    guessList = [];
+    currentWord = [];    
+    //choose new random word from array
+    wordIndex = movies[Math.floor(Math.random() * movies.length)];
+    //put new word into spaces
+    for(var i = 0; i < movies[wordIndex].length; i++){
+        currentWord.push("_");
+    }
+    //reset win/lose image
+    document.getElementById("winLoseImage").src = "";
+    
 
 }
 
 //UPDATE IMAGE UPON WIN OR LOSE
 function imageUpdate() {
-    document.getElementById("winLoseImage").src = "assets/images/" + 
+    document.getElementById("winLoseImage").src = "assets/images/" + WINORLOSESTATE + ".jpg";
 
 }
 
 
-//game chooses title from array randomly
-var movie = movies[Math.floor(Math.random() * movies.length)];
 //NOT PREVENTING REPEATS    
 
 var chosenWord = movie.toLowerCase();
