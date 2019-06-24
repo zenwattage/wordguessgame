@@ -7,6 +7,7 @@ var letterList = [];
 var guessList = [];
 var wins = 0;
 
+
 //array of movies
 var movies = [
     "Ghostbusters",
@@ -71,6 +72,7 @@ addEventListener("keyup", function (event) {
             //console.log("In the Word: "+chosenWord[j]);
         } else {
             guessList.push(keyPressed);
+            turns--;
         }
 
     }
