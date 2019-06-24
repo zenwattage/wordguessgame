@@ -1,17 +1,17 @@
 //REFACTOR
 //theme: 80's movies
 
-var wrongTries = 10;
-var guessesLeft = 0;
+var wrongTries = 10;             //beginning # of tries player has
+var guessesLeft = 0;         //tries remaining
 
-var spaceList = [];
-var letterList = [];
-var guessList = [];
+var spaceList = [];          //dashes matching letters in chosen word
 
-var wins = 0;
+var guessList = [];          //list of letters guessed
 
-var gameRunning = false;
-var gameOver = false;
+var wins = 0;               //amount of users wins
+
+var gameRunning = false;             //flag for game start
+var gameOver = false;            //flag for game end
 
 //array of movies
 var movies = [
@@ -31,7 +31,7 @@ var movies = [
 
 //GAME VIEW UPDATE FUNCTION
 function displayToUser() {
-    
+
 }
 
 //GET STATE OF GAME FUNCTION
@@ -41,9 +41,9 @@ function getWin() {
 
 //GET GUESS FUNCTION
 function checkGuess() {
-    
-//check if keys are between a(65)-z(90)
-//if(event.keyPressed >= 65 && event.keyPressed <= 90)
+
+    //check if keys are between a(65)-z(90)
+    //if(event.keyPressed >= 65 && event.keyPressed <= 90)
 
 }
 //RESET GAME FUNCTION
@@ -53,7 +53,7 @@ function restGame() {
 
 //UPDATE IMAGE UPON WIN OR LOSE
 function imageUpdate() {
-    document.getElementById("winLoseImage").src= "assets/images/" + 
+    document.getElementById("winLoseImage").src = "assets/images/" + 
 
 }
 
@@ -74,7 +74,7 @@ for (var i = 0; i < chosenWord.length; i++) {
 
 for (var g = 0; g < chosenWord.length; g++) {
     letterList[g] = chosenWord[g];
-    
+
 }
 console.log(letterList);
 
