@@ -25,19 +25,32 @@ var movies = [
 ];
 
 //GAME VIEW UPDATE FUNCTION
-
 function displayToUser() {
     
 }
+
 //GET STATE OF GAME FUNCTION
 function getWin() {
 
 }
-//CHECK WINSTATE FUNCTION
-//RESET GAME FUNCTION
 
+//GET GUESS FUNCTION
+function checkGuess() {
+    
 //check if keys are between a(65)-z(90)
 //if(event.keyPressed >= 65 && event.keyPressed <= 90)
+
+}
+//RESET GAME FUNCTION
+function restGame() {
+
+}
+
+//UPDATE IMAGE UPON WIN OR LOSE
+function imageUpdate() {
+
+}
+
 
 //game chooses title from array randomly
 var movie = movies[Math.floor(Math.random() * movies.length)];
