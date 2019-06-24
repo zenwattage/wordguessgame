@@ -79,7 +79,7 @@ function resetGame() {
 
 //UPDATE IMAGE UPON WIN OR LOSE
 function imageUpdate() {
-    document.getElementById("winLoseImage").src = "assets/images/" + WINORLOSESTATE + ".jpg";
+    document.getElementById("winLoseImage").src = "assets/images/" + WINORLOSESTATEIMAGE + ".jpg";
 
 }
 
