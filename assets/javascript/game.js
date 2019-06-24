@@ -37,6 +37,12 @@ function displayToUser() {
 
 //GET STATE OF GAME FUNCTION
 function getWin() {
+    if(currentWord.indexOf("_") === -1) {
+        document.getElementById("winImage").style.cssText = "display: block";
+        document.getElementById("tryAgain").style.cssText = "display: block";
+        wins++;
+        gameOver = true;
+    }
 
 };
 
@@ -57,6 +63,8 @@ function makeGuess(letter) {
     getWin();
 };
 
+
+//CHECK FOR MATCHING KEY PRESSES IN CHOSEN STRING 
 function checkGuess(letter){
     var pos = [];
 
@@ -94,6 +102,19 @@ function resetGame() {
     }
     //reset win/lose image
     document.getElementById("winLoseImage").src = "";
+
+    //guessed word
+    for (var i = 0; i < movies[wordIndex].length; i++){
+        currentWord.push("_");
+    }
+
+    //hide images
+    document.getElementById("tryagain").style.cssText = "display:none";
+    document.getElementById("youlose").style.cssText = "display:none";
+    document.getElementById("youwin").style.cssText = "display:none";
+
+    //dislay to user
+    displayToUser();
 };
 
 
@@ -104,38 +125,18 @@ function imageUpdate() {
 };
 
 
-var keyPressed = "";
-
-addEventListener("keyup", function (event) {
-    keyPressed = event.key;
-    //console.log(keyPressed);
-
-    for (var j = 0; j < chosenWord.length; j++) {
-        //if the index of the chosen word matches key
-        if (chosenWord[j] === keyPressed) {
-            //update dashed line with character pressed
-            rightAnSound.play();
-
-            spaceList[j] = String(keyPressed);
-            //console.log("In the Word: "+chosenWord[j]);
-        } else {
-
-
-            //check if keys are between a(65)-z(90)
-            //if(event.keyPressed >= 65 && event.keyPressed <= 90)
-
-
-            guessList.push(keyPressed);
-            wrongTries--;
+document.onkeydown = function(event) {
+    //if game is not running reset game
+    if(gameOver){
+        resetGame();
+        gameOver = false;
+    } else {
+        //accepting only a(65) through z(90) keys
+        if(event.keyCode >= 65 && event.keyCode <= 90){
+            makeGuess(event.key.toLowerCase());
         }
-
     }
-
-
-});
-
-
-
+}
 
 
 //write score to screen
