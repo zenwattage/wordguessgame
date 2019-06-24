@@ -5,7 +5,7 @@ var wrongGuesses = 10;
 var spaceList = [];
 var letterList = [];
 var guessList = [];
-
+var wins = 0;
 
 //array of movies
 var movies = [
@@ -36,7 +36,7 @@ var movie = movies[Math.floor(Math.random() * movies.length)];
 //NOT PREVENTING REPEATS    
 
 var chosenWord = movie.toLowerCase();
-
+console.log(chosenWord);
 //fill empty array with spaces equal to letters in chosen word
 
 for (var i = 0; i < chosenWord.length; i++) {
@@ -47,9 +47,9 @@ for (var i = 0; i < chosenWord.length; i++) {
 
 for (var g = 0; g < chosenWord.length; g++) {
     letterList[g] = chosenWord[g];
-    console.log(letterList);
+    
 }
-
+console.log(letterList);
 
 
 //display dashes on page
