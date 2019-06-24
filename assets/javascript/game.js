@@ -25,7 +25,14 @@ var movies = [
 ];
 
 //GAME VIEW UPDATE FUNCTION
+
+function displayToUser() {
+    
+}
 //GET STATE OF GAME FUNCTION
+function getWin() {
+    
+}
 //CHECK WINSTATE FUNCTION
 //RESET GAME FUNCTION
 
@@ -77,7 +84,6 @@ addEventListener("keyup", function (event) {
 
     }
 
-
     //write score to screen
     document.getElementById("wrongTries").innerHTML = "Guessed Letters: " + guessList;
     document.getElementById("score").innerHTML = "Turns Remaining: " + turns;
@@ -85,6 +91,7 @@ addEventListener("keyup", function (event) {
 
 
 })
+
 
 
 
