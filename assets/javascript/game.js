@@ -1,7 +1,7 @@
 //REFACTOR
 //theme: 80's movies
 
-var wrongGuesses = 10;
+var wrongTries = 10;
 var spaceList = [];
 var letterList = [];
 var guessList = [];
@@ -79,7 +79,7 @@ addEventListener("keyup", function (event) {
 
 
     //write score to screen
-    document.getElementById("wrongGuesses").innerHTML = "Guessed Letters: " + guessList;
+    document.getElementById("wrongTries").innerHTML = "Guessed Letters: " + guessList;
     document.getElementById("score").innerHTML = "Turns Remaining: " + turns;
     document.getElementById("spaces").innerHTML = spaceList.join("");
 

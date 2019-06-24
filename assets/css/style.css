@@ -81,6 +81,13 @@ h1, h2, h3 {
     text-shadow: 0 0 5px rgb(79, 8, 88), 0 0 10px rgb(255, 0, 191);
 }
 
+.presskeys {
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin-left: 25%;
+  margin-right: 25%;
+}
 /*---div start_button--*/
 
 .button {
