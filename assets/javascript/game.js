@@ -31,7 +31,7 @@ function displayToUser() {
 }
 //GET STATE OF GAME FUNCTION
 function getWin() {
-    
+
 }
 //CHECK WINSTATE FUNCTION
 //RESET GAME FUNCTION
@@ -79,14 +79,15 @@ addEventListener("keyup", function (event) {
             //console.log("In the Word: "+chosenWord[j]);
         } else {
             guessList.push(keyPressed);
-            turns--;
+            wrongTries--;
         }
 
     }
 
     //write score to screen
+    document.getElementById("currentScore").innerHTML = "wins: " + wins;
     document.getElementById("wrongTries").innerHTML = "Guessed Letters: " + guessList;
-    document.getElementById("score").innerHTML = "Turns Remaining: " + turns;
+    document.getElementById("score").innerHTML = "Turns Remaining: " + wrongTries;
     document.getElementById("spaces").innerHTML = spaceList.join("");
 
 
