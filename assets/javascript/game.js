@@ -1,7 +1,7 @@
 //REFACTOR
 //theme: 80's movies
 
-var wrongTries = 10;             //beginning # of tries player has
+var startTries = 10;             //beginning # of tries player has
 var guessesLeft = 0;         //tries remaining
 
 var spaceList = [];          //dashes matching letters in chosen word
@@ -48,6 +48,7 @@ function checkGuess() {
 }
 //RESET GAME FUNCTION
 function restGame() {
+    guessesLeft = 
 
 }
 
