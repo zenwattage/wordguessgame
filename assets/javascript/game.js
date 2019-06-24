@@ -48,7 +48,7 @@ function checkGuess() {
 
 }
 //RESET GAME FUNCTION
-function restGame() {
+function resetGame() {
     guessesLeft = startTries;
     gameRunning = false;
     //clear arrays
