@@ -86,9 +86,11 @@ h1, h2, h3 {
 .button {
   display: inline-block;
   border-radius: 4px;
-  background-color: #d80eb6;
+  background-color: #d80eb659;
+  
+  text-shadow: 0 0 5px rgb(79, 8, 88), 0 0 10px rgb(255, 0, 191);
   border: none;
-  color: #FFFFFF;
+  color: lawngreen;
   text-align: center;
   font-family: 'Bangers', cursive;
   font-size: 28px;
