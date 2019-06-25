@@ -32,6 +32,19 @@ var movies = [
 
 //GAME VIEW UPDATE FUNCTION
 function displayToUser() {
+    document.getElementById("wins").innerText = wins;
+    document.getElementById("currentWord").innerText="";
+    for(var i = 0; i < currentWord.length; i ++){
+        document.getElementById("currentWord").innerText += currentWord[i];
+    }
+
+    document.getElementById("guessesLeft").innerText = guessesLeft;
+    document.getElementById("guessedList").innerText = guessedList;
+
+
+
+
+
 
 };
 
