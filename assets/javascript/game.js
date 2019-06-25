@@ -40,12 +40,11 @@ function displayToUser() {
 
     document.getElementById("guessesLeft").innerText = guessesLeft;
     document.getElementById("guessedList").innerText = guessedList;
-
-
-
-
-
-
+    if(guessesLeft <= 0) {
+        document.getElementById("gameover").style.cssText = "display: block";
+        
+        gameOver = true;
+    }
 };
 
 
