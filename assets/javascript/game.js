@@ -48,16 +48,6 @@ function displayToUser() {
 
 };
 
-//GET STATE OF GAME FUNCTION
-function getWin() {
-    if(currentWord.indexOf("_") === -1) {
-        document.getElementById("winImage").style.cssText = "display: block";
-        document.getElementById("tryAgain").style.cssText = "display: block";
-        wins++;
-        gameOver = true;
-    }
-
-};
 
 //GET GUESS FUNCTION
 function makeGuess(letter) {
@@ -134,7 +124,7 @@ function resetGame() {
 
 //UPDATE IMAGE UPON WIN OR LOSE
 function imageUpdate() {
-    document.getElementById("winLoseImage").src = "assets/images/" + WINORLOSESTATEIMAGE + ".jpg";
+    document.getElementById("winLoseImage").src = "assets/images/" + (startTries - guessesLeft) +".jpg";
 };
 
 
@@ -151,6 +141,19 @@ document.onkeydown = function(event) {
     }
 }
 
+
+
+
+//GET STATE OF GAME FUNCTION
+function getWin() {
+    if(currentWord.indexOf("_") === -1) {
+        document.getElementById("winImage").style.cssText = "display: block";
+        document.getElementById("loseImage").style.cssText = "display: block";
+        wins++;
+        gameOver = true;
+    }
+
+};
 
 //write score to screen
 document.getElementById("currentScore").innerHTML = "wins: " + wins;
